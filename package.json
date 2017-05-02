@@ -1,0 +1,13 @@
+{
+  "name": "basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.ts",
+  "scripts": {
+    "test": "mocha --require ts-node/register src/**/**/*.ts",
+    "build": "tsc -p .",
+    "start": "npm build && node build/app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
