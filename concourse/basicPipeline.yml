@@ -1,0 +1,31 @@
+---
+resources:
+
+- name: git
+  type: git
+  source:
+    uri: https://github.com/ehelin/basic.git
+
+jobs:
+- name: unit-tests
+  plan:
+  - get: git
+    trigger: true
+  - task: unit-tests
+    config:
+      platform: linux
+      image_resource:
+        type: docker-image
+        source: {repository: node, "7.4.0"}
+      inputs:
+      - name: git
+        path: pre-build-directory
+      outputs:
+      - name: post-build
+        path: post-build-directory
+      run:
+        path: sh
+        args:
+          - -exc
+          - |
+            echo [All Done!]
