@@ -26,6 +26,10 @@ jobs:
       run:
         path: sh
         args:
-          - -exc
-          - |
-            echo [All Done!]
+           - -exc
+           - |
+             ls
+             cd pre-build-directory
+             npm install
+             npm test
+             echo [All Done!]
