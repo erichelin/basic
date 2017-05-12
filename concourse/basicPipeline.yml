@@ -7,7 +7,7 @@ resources:
     uri: https://github.com/ehelin/basic.git
 
 jobs:
-- name: unit-tests
+- name: build
   plan:
   - get: git
     trigger: true
