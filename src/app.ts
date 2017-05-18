@@ -1,6 +1,7 @@
-import Hapi = require('hapi');
+import {Server} from "hapi";
 
-const server = new Hapi.Server();
+const server = new Server();
+
 server.connection({
     host: 'localhost',
     port: 8000
