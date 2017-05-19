@@ -6,6 +6,16 @@ resources:
   source:
     uri: https://github.com/ehelin/basic.git
 
+- name: deployLocation
+  type: cf
+  source:
+    api: https://api.sys.pcf.quickenloansdev.com
+    username: XXXXXXXXXXX
+    password: XXXXXXXXXXX
+    organization: rocketmortgage
+    space: dev
+    skip_cert_check: false
+
 jobs:
 - name: build
   plan:
@@ -33,3 +43,8 @@ jobs:
              npm install
              npm test
              echo [All Done!]
+  - aggregate:
+      - put: deployLocation
+        params:
+          manifest: post-build/concourse/basicPipeline.yml
+          path: api-docs-build/
