@@ -9,10 +9,10 @@ resources:
 - name: deployLocation
   type: cf
   source:
-    api: XXXXXXXXX
-    username: XXXXXXXXXX
-    password: XXXXXXXXXX
-    organization: XXXXXXXXXX
+    api: XXXXXXXXXXXXXX
+    username: XXXXXXXXXXX
+    password: XXXXXXXXXXX
+    organization: XXXXXXXXXXXX
     space: dev
     skip_cert_check: false
 
@@ -32,7 +32,6 @@ jobs:
         path: pre-build-directory
       outputs:
       - name: post-build
-        path: post-build-directory
       run:
         path: sh
         args:
@@ -42,9 +41,16 @@ jobs:
              cd pre-build-directory
              npm install
              npm test
+             ls
+             cd ..
+             cp -LR pre-build-directory/* post-build
+             cd post-build
+             ls
+             cd concourse
+             ls
              echo [All Done!]
   - aggregate:
       - put: deployLocation
         params:
-          manifest: post-build-directory/concourse/manifest-dev.yml
-          path: post-build-directory/
+          manifest: post-build/concourse/manifest-dev.yml
+          path: post-build/
