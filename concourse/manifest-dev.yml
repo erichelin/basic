@@ -1,0 +1,7 @@
+---
+applications:
+- name: basic
+  instances: 1
+  host: basic
+  command: node build/app.js
+  buildpack: nodejs_buildpack
