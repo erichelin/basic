@@ -2,10 +2,9 @@ import {Server} from "hapi";
 
 const server = new Server();
 
-server.connection({
-    host: 'localhost',
-    port: 8000
-});
+const port = process.env.PORT || 8080;
+
+server.connection({port});
 
 server.route({
     method: 'GET',

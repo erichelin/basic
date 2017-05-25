@@ -4,7 +4,7 @@ import {expect} from 'chai';
 describe('app.ts', () => {
    it('run GET /', async () => {
        const server: Server = new Server();
-       server.connection({ port: 8000, host: 'localhost' });
+       server.connection({ port: 8000 });
 
        server.route({
            method: 'GET',
