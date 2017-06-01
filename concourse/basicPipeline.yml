@@ -6,16 +6,6 @@ resources:
   source:
     uri: https://github.com/ehelin/basic.git
 
-- name: deployLocation
-  type: cf
-  source:
-    api: XXXXXXXXXXXXXX
-    username: XXXXXXXXXXX
-    password: XXXXXXXXXXX
-    organization: XXXXXXXXXXXX
-    space: dev
-    skip_cert_check: false
-
 jobs:
 - name: build
   plan:
@@ -49,8 +39,3 @@ jobs:
              cd concourse
              ls
              echo [All Done!]
-  - aggregate:
-      - put: deployLocation
-        params:
-          manifest: post-build/concourse/manifest-dev.yml
-          path: post-build/
