@@ -12,10 +12,10 @@ phases:
   build:
     commands:
       - echo Build command...
-      - tsc -p . && node build/app.js
+      - tsc -p .
   post_build:
     commands:
       - echo Post build...
 artifacts:
   files:
-    - build/app.ts
+    - build/app.js
