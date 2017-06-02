@@ -21,10 +21,9 @@ phases:
       - npm run build
       - ls
       - mkdir deploy
-      - cp *.* deploy
-      - cp -R build deploy
-      - cp -R concourse deploy
-      - cp -R node_modules deploy
+      - cp buildspec.yml deploy
+      - cp package.json deploy
+      - cp ts.config deploy
       - cp -R src deploy
       - cd deploy
       - ls
@@ -37,4 +36,4 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - deploy/**/*
+    - basic.zip
