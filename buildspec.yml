@@ -5,15 +5,11 @@ phases:
     commands:
       - echo Install Commands...
       - npm install
-  pre_build:
-    commands:
-      - echo Prebuild commands...
-      -
+      - ls
   build:
     commands:
-      - echo $CODEBUILD_SRC_DIR
       - echo Build command...
-      - tsc -p .
+      - echo $CODEBUILD_SRC_DIR
   post_build:
     commands:
       - echo Build completed on `date`
