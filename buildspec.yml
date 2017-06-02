@@ -20,8 +20,6 @@ phases:
       - echo Running npm run build..
       - npm run build
       - ls
-      - cd build
-      - ls
       - zip -r basic.zip build
       - ls
   post_build:
