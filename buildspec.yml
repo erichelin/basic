@@ -20,15 +20,10 @@ phases:
       - echo Running npm run build..
       - npm run build
       - ls
-      - mkdir deploy
-      - cp buildspec.yml deploy
-      - cp package.json deploy
-      - cp tsconfig.json deploy
-      - cp -R src deploy
-      - cd deploy
-      - ls
-      - cd ..
-      - zip -r basic.zip deploy
+      - zip basic.zip buildspec.yml
+      - zip basic.zip package.json
+      - zip basic.zip tsconfig.json
+      - zip -r basic.zip src
       - ls
   post_build:
     commands:
