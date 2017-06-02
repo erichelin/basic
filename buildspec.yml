@@ -11,6 +11,7 @@ phases:
       - echo Build command...
       - echo $CODEBUILD_SRC_DIR
       - cd src
+      - npm run build
       - ls
   post_build:
     commands:
