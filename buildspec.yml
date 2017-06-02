@@ -23,7 +23,7 @@ phases:
       - mkdir deploy
       - cp buildspec.yml deploy
       - cp package.json deploy
-      - cp ts.config deploy
+      - cp tsconfig.json deploy
       - cp -R src deploy
       - cd deploy
       - ls
