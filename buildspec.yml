@@ -21,7 +21,7 @@ phases:
       - npm run build
       - ls
       - mkdir deploy
-      - cp *.* deploy
+      - cp * deploy
       - cd deploy
       - ls
       - cd ..
