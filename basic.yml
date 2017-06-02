@@ -1,0 +1,21 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Install Commands...
+      - npm install
+  pre_build:
+    commands:
+      - echo Prebuild commands...
+      -
+  build:
+    commands:
+      - echo Build command...
+      -
+  post_build:
+    commands:
+      - echo Post build...
+artifacts:
+  files:
+    - build/app.ts
