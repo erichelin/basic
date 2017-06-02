@@ -20,12 +20,12 @@ phases:
       - echo Running npm run build..
       - npm run build
       - ls
-      - cp package.json build/package.json
-      - cd build
+      - mkdir deploy
+      - cp *.* deploy
+      - cd deploy
       - ls
       - cd ..
-      - ls
-      - zip -r basic.zip build
+      - zip -r basic.zip deploy
       - ls
   post_build:
     commands:
