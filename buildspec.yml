@@ -20,11 +20,14 @@ phases:
       - echo Running npm run build..
       - npm run build
       - ls
+      - cd build
+      - ls
+      - zip -r basic.zip build
+      - ls
   post_build:
     commands:
       - echo POST BUILD Commands ---------------------------------------------
-      - echo Running ls
       - echo Build completed on `date`
 artifacts:
   files:
-    - build/app.js
+    - build/basic.zip
