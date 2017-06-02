@@ -10,6 +10,8 @@ phases:
     commands:
       - echo Build command...
       - echo $CODEBUILD_SRC_DIR
+      - cd src
+      - ls
   post_build:
     commands:
       - echo Build completed on `date`
