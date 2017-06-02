@@ -20,6 +20,8 @@ phases:
       - echo Running npm run build..
       - npm run build
       - ls
+      - cp package.json build/package.json
+      - ls
       - zip -r basic.zip build
       - ls
   post_build:
