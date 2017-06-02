@@ -4,9 +4,7 @@ phases:
   install:
     commands:
       - echo INSTALL Commands ------------------------------------------------
-      - echo Install Commands...
-      - npm install
-      - ls
+      - echo Nothing to do in the install phase...
   pre_build:
     commands:
       - echo PRE BUILD Commands ----------------------------------------------
@@ -14,11 +12,6 @@ phases:
   build:
     commands:
       - echo BUILD Commands --------------------------------------------------
-      - echo Build command...
-      - echo $CODEBUILD_SRC_DIR
-      - ls
-      - echo Running npm run build..
-      - npm run build
       - ls
       - zip basic.zip buildspec.yml
       - zip basic.zip package.json
