@@ -4,15 +4,15 @@
   "description": "",
   "main": "app.ts",
   "scripts": {
-    "test": "mocha --require ts-node/register **/**/*.ts",
+    "test": "mocha --require ts-node/register src/**/**/*.ts",
     "build": "tsc -p .",
     "start": "tsc -p . && node build/app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/hapi": "16.0.6",
-    "hapi": "16.1.1",
+    "@types/hapi": "^16.0.4",
+    "hapi": "^16.1.1",
     "@types/chai": "3.5.0",
     "@types/mocha": "2.2.40",
     "@types/sinon": "2.1.2",

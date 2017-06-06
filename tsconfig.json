@@ -3,13 +3,15 @@
     "outDir": "build",
     "module": "commonjs",
     "target": "es6",
-    "lib": ["es6"],
+    "lib": [
+      "es6"
+    ],
     "noImplicitAny": true,
     "strictNullChecks": true,
     "sourceMap": false,
     "alwaysStrict": true
   },
   "include": [
-    "app.ts"
+    "src/**/*.ts"
   ]
 }
