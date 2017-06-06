@@ -16,14 +16,15 @@ phases:
       - npm install
       - npm run build
       - npm run test
+      - zip basic.zip buildspec.yml
+      - zip basic.zip package.json
+      - zip basic.zip tsconfig.json
+      - zip -r basic.zip src
+      - ls
   post_build:
     commands:
       - echo POST BUILD Commands ---------------------------------------------
       - echo Build completed on `date`
 artifacts:
   files:
-    - buildspec.yml
-    - concourse
-    - package.json
-    - src
-    - tsconfig.json
+    - basic.zip
