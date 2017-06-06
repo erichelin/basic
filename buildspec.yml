@@ -16,10 +16,11 @@ phases:
       - npm install
       - npm run build
       - npm run test
-      - zip basic.zip buildspec.yml
-      - zip basic.zip package.json
-      - zip basic.zip tsconfig.json
-      - zip -r basic.zip src
+      - mkdir deploy
+      - cp -R node_modules deploy
+      - cp -R build deploy
+      - cp package.json deploy
+      - zip -r basic.zip deploy
       - ls
   post_build:
     commands:
