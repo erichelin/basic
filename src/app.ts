@@ -16,5 +16,5 @@ server.route({
 
 server.start((err: any) => {
     if (err) { throw err; }
-    console.log('Server running at:', server.info.uri);
+    console.log('Server running at:', port);
 });

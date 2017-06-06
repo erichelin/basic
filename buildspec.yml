@@ -14,6 +14,7 @@ phases:
       - echo BUILD Commands --------------------------------------------------
       - ls
       - npm install
+      - npm run build
       - npm run test
   post_build:
     commands:
