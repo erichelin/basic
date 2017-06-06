@@ -13,7 +13,7 @@ phases:
     commands:
       - echo BUILD Commands --------------------------------------------------
       - ls
-      - tar czf basic.tar.gz .
+      - tar czf basic.tar.gz buildspec.yml package.json tsconfig.json src
 #      - zip basic.zip buildspec.yml
 #      - zip basic.zip package.json
 #      - zip basic.zip tsconfig.json
