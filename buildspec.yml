@@ -13,11 +13,7 @@ phases:
     commands:
       - echo BUILD Commands --------------------------------------------------
       - ls
-#      - zip basic.zip buildspec.yml
-#      - zip basic.zip package.json
-#      - zip basic.zip tsconfig.json
-#      - zip -r basic.zip src
-#      - ls
+      - npm run test
   post_build:
     commands:
       - echo POST BUILD Commands ---------------------------------------------
