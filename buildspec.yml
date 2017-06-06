@@ -16,11 +16,12 @@ phases:
       - npm install
       - npm run build
       - npm run test
+      - ls
       - zip -r basic.zip node_modules
       - zip -r basic.zip build/app.js
-      - zip -r basic.zip build/test/app.test.js
-      - zip -r basic.zip build/dynamoDb/__test__/dynamoDb.test.js
-      - zip -r basic.zip build/dynamoDb/dynamoDb.js
+      #- zip -r basic.zip build/test/app.test.js
+      #- zip -r basic.zip build/dynamoDb/__test__/dynamoDb.test.js
+      #- zip -r basic.zip build/dynamoDb/dynamoDb.js
       - zip -r basic.zip package.json
       - ls
   post_build:
