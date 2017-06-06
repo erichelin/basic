@@ -24,4 +24,8 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - basic.zip
+    - buildspec.yml
+    - concourse
+    - package.json
+    - src
+    - tsconfig.json
