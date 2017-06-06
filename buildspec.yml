@@ -18,9 +18,12 @@ phases:
       - npm run test
       - mkdir deploy
       - cp -R node_modules deploy
-      - cp -R build deploy
+      - cp -R build/app.js deploy
       - cp package.json deploy
       - zip -r basic.zip deploy
+      - cd deploy
+      - ls
+      - cd ..
       - ls
   post_build:
     commands:
