@@ -16,13 +16,10 @@ phases:
       - npm install
       - npm run build
       - npm run test
-      - zip -r basic.zip node_modules
-      - ls
-      - zip -r basic.zip build/app.js
-      - zip -r basic.zip build/__test__/app.test.js
-      - zip -r basic.zip build/dynamoDb/__test__/dynamoDb.test.js
-      - zip -r basic.zip build/dynamoDb/dynamoDb.js
-      - zip -r basic.zip package.json
+      - cp build/app.js .
+      - cp build/__test__/app.test.js .
+      - cp build/dynamoDb/__test__/dynamoDb.test.js .
+      - cp build/dynamoDb/dynamoDb.js .
       - ls
   post_build:
     commands:
@@ -30,4 +27,4 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - basic.zip
+    - **/*
