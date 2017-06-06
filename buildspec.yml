@@ -15,11 +15,7 @@ phases:
       - ls
       - npm install
       - npm run build
-      - npm run test
       - cp build/app.js .
-      - cp build/__test__/app.test.js .
-      - cp build/dynamoDb/__test__/dynamoDb.test.js .
-      - cp build/dynamoDb/dynamoDb.js .
       - ls
   post_build:
     commands:
