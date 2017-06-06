@@ -13,7 +13,7 @@ phases:
     commands:
       - echo BUILD Commands --------------------------------------------------
       - ls
-      - tar cyf basic.tar.bz2 .
+      - tar czf basic.tar.gz .
 #      - zip basic.zip buildspec.yml
 #      - zip basic.zip package.json
 #      - zip basic.zip tsconfig.json
@@ -25,4 +25,4 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - basic.tar.bz2
+    - basic.tar.gz
