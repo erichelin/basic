@@ -24,4 +24,4 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - basic.tar.gz
+    - basic.zip
