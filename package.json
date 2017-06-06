@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.ts",
   "scripts": {
-    "test": "mocha --require ts-node/register src/**/**/*.ts",
+    "test": "mocha --require ts-node/register **/**/*.ts",
     "build": "tsc -p .",
     "start": "tsc -p . && node build/app.js"
   },
