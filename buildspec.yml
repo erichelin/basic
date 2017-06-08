@@ -20,6 +20,7 @@ phases:
       - cp build/dynamoDb/__test__/dynamoDb.test.js .
       - cp build/dynamoDb/dynamoDb.js .
       - ls
+      - echo build commands done
   post_build:
     commands:
       - echo POST BUILD Commands ---------------------------------------------
